@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | PLG Fan Club</title>
+  <meta name="description" content="Explore upcoming and past PLG Fan Club events including annual gatherings, welfare visits, weddings, and social parties in Kentinkrono.">
+  <meta property="og:title" content="PLG Fan Club Events">
+  <meta property="og:description" content="Stay updated on PLG Fan Club upcoming and past events in Kentinkrono, Ghana.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/plg-fanclub/events.html">
+  <meta property="og:image" content="https://picsum.photos/seed/plg-og-events/1200/630">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="PLG Fan Club home">
+        <span class="logo-badge" aria-hidden="true">PLG</span>
+        <span class="brand-text">
+          <strong>PLG Fan Club</strong>
+          <small>Together We Rise</small>
+        </span>
+      </a>
+      <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html" class="is-active" aria-current="page">Events</a>
+        <a href="blog.html">Blog</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="membership.html">Membership</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero reveal">
+      <div class="container">
+        <p class="eyebrow">Community Calendar</p>
+        <h1>Celebrate With Us All Year Round</h1>
+        <p>
+          From welfare outreach to joyful get-togethers, our events keep the PLG family connected,
+          supported, and inspired.
+        </p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Upcoming Events</p>
+          <h2>Join Our Next Gatherings</h2>
+        </div>
+        <div id="eventsLoading" class="content-loading" role="status" aria-live="polite">
+          <span class="loading-spinner" aria-hidden="true"></span>
+          <span>Loading events...</span>
+        </div>
+        <div class="cards-grid event-grid" id="upcomingEventsGrid"></div>
+        <p class="content-empty" id="eventsUpcomingEmpty" hidden>No events posted yet. Check back soon!</p>
+      </div>
+    </section>
+
+    <section class="section section-angled reveal">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Past Events</p>
+          <h2>Moments That Shaped Our Journey</h2>
+        </div>
+        <div class="cards-grid archive-grid" id="pastEventsGrid"></div>
+        <p class="content-empty" id="eventsPastEmpty" hidden>No events posted yet. Check back soon!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html" aria-label="PLG Fan Club home">
+          <span class="logo-badge" aria-hidden="true">PLG</span>
+          <span class="brand-text">
+            <strong>PLG Fan Club</strong>
+            <small>Our family, our pride</small>
+          </span>
+        </a>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Location</h3>
+        <p>Kentinkrono, Ghana</p>
+        <p>GPS: AK-631-1544</p>
+      </div>
+      <div>
+        <h3>Social</h3>
+        <button class="social-placeholder" type="button" title="Coming Soon" aria-label="TikTok coming soon">
+          <span aria-hidden="true">♫</span> TikTok
+        </button>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2025 PLG Fan Club. All rights reserved.</p>
+      <a href="/admin" style="opacity: 0.2; font-size: 11px; color: inherit; text-decoration: none;">Admin</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/content-utils.js" defer></script>
+  <script src="js/events-loader.js" defer></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

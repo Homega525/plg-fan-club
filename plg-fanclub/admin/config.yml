@@ -1,0 +1,58 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "_posts/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Cover Image", name: "thumbnail", widget: "image", required: false }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["News", "Announcement", "Welfare", "General"]
+
+  - name: "events"
+    label: "Events"
+    folder: "_posts/events"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Event Name", name: "title", widget: "string" }
+      - { label: "Event Date", name: "event_date", widget: "datetime" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Cover Image", name: "thumbnail", widget: "image", required: false }
+      - { label: "Description", name: "body", widget: "markdown" }
+      - label: "Event Type"
+        name: "type"
+        widget: "select"
+        options: ["Funeral Support", "Wedding", "Annual Get-Together", "Party", "Other"]
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        options: ["Upcoming", "Past"]
+
+  - name: "gallery"
+    label: "Gallery"
+    folder: "_posts/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Caption", name: "title", widget: "string" }
+      - { label: "Photo", name: "image", widget: "image" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Funerals", "Weddings", "Get-Together", "Parties", "General"]
+      - { label: "Date Taken", name: "date", widget: "datetime" }
