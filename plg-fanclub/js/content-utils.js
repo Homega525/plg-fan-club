@@ -167,6 +167,9 @@
     return [];
   };
 
+  const isGithubContentsApiUrl = (value = "") =>
+    /^https:\/\/api\.github\.com\/repos\/[^/]+\/[^/]+\/contents\/.+/i.test(value);
+
   const discoverMarkdownFiles = async (folderPath) => {
     const cleanFolder = folderPath.replace(/\/+$/, "");
     const fromIndex = await fetchJsonList(cleanFolder).catch(() => []);
@@ -185,6 +188,36 @@
   };
 
   const loadCollection = async (folderPath) => {
+    if (isGithubContentsApiUrl(folderPath)) {
+      const response = await fetch(folderPath, { cache: "no-store" });
+      if (!response.ok) return [];
+
+      const payload = await response.json();
+      if (!Array.isArray(payload)) return [];
+
+      const markdownFiles = payload.filter((item) => {
+        if (!item || item.type !== "file" || typeof item.download_url !== "string") return false;
+        return /\.(md|markdown)$/i.test(item.name || "");
+      });
+
+      const entries = await Promise.all(
+        markdownFiles.map(async (file) => {
+          const fileResponse = await fetch(file.download_url, { cache: "no-store" });
+          if (!fileResponse.ok) return null;
+          const raw = await fileResponse.text();
+          const parsed = parseFrontmatter(raw);
+          return {
+            filePath: file.path || file.download_url,
+            slug: (file.name || "").replace(/\.(md|markdown)$/i, ""),
+            data: parsed.data,
+            body: parsed.body.trim(),
+          };
+        })
+      );
+
+      return entries.filter(Boolean);
+    }
+
     const files = await discoverMarkdownFiles(folderPath);
     if (!files.length) return [];
 
