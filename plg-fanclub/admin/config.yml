@@ -2,14 +2,14 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "images/uploads"
+media_folder: "plg-fanclub/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
 
   - name: "blog"
     label: "Blog Posts"
-    folder: "_posts/blog"
+    folder: "plg-fanclub/_posts/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -25,7 +25,7 @@ collections:
 
   - name: "events"
     label: "Events"
-    folder: "_posts/events"
+    folder: "plg-fanclub/_posts/events"
     create: true
     slug: "{{slug}}"
     fields:
@@ -45,7 +45,7 @@ collections:
 
   - name: "gallery"
     label: "Gallery"
-    folder: "_posts/gallery"
+    folder: "plg-fanclub/_posts/gallery"
     create: true
     slug: "{{slug}}"
     fields:
