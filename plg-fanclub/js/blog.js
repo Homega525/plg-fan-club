@@ -1,4 +1,7 @@
 (() => {
+  const BLOG_CONTENTS_API =
+    "https://api.github.com/repos/Homega525/plg-fan-club/contents/plg-fanclub/_posts/blog";
+
   const listNode = document.getElementById("blogList");
   const loadingNode = document.getElementById("blogLoading");
   const emptyNode = document.getElementById("blogEmpty");
@@ -63,7 +66,7 @@
 
   const init = async () => {
     bindReadMoreToggle();
-    const entries = await window.PLGContent.loadCollection("/_posts/blog");
+    const entries = await window.PLGContent.loadCollection(BLOG_CONTENTS_API);
     const sorted = entries.sort((a, b) => {
       const dateA = window.PLGContent.toDate(a.data.date);
       const dateB = window.PLGContent.toDate(b.data.date);

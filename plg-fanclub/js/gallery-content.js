@@ -1,4 +1,7 @@
 (() => {
+  const GALLERY_CONTENTS_API =
+    "https://api.github.com/repos/Homega525/plg-fan-club/contents/plg-fanclub/_posts/gallery";
+
   const galleryGrid = document.querySelector("[data-gallery-grid]");
   const loadingNode = document.getElementById("galleryLoading");
   const emptyNode = document.getElementById("galleryEmpty");
@@ -44,7 +47,7 @@
   };
 
   const init = async () => {
-    const entries = await window.PLGContent.loadCollection("/_posts/gallery");
+    const entries = await window.PLGContent.loadCollection(GALLERY_CONTENTS_API);
     hideLoading();
 
     if (!entries.length) {

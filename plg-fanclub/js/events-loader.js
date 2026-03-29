@@ -1,4 +1,7 @@
 (() => {
+  const EVENTS_CONTENTS_API =
+    "https://api.github.com/repos/Homega525/plg-fan-club/contents/plg-fanclub/_posts/events";
+
   const upcomingNode = document.getElementById("upcomingEventsGrid");
   const pastNode = document.getElementById("pastEventsGrid");
   const loadingNode = document.getElementById("eventsLoading");
@@ -63,7 +66,7 @@
   };
 
   const init = async () => {
-    const entries = await window.PLGContent.loadCollection("/_posts/events");
+    const entries = await window.PLGContent.loadCollection(EVENTS_CONTENTS_API);
     const sorted = entries.sort(sortByNewest);
     const upcoming = sorted.filter((item) => String(item.data.status || "").toLowerCase() === "upcoming");
     const past = sorted.filter((item) => String(item.data.status || "").toLowerCase() === "past");
