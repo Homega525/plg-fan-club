@@ -178,18 +178,12 @@ ul {
 }
 
 .logo-badge {
-  display: grid;
-  place-items: center;
+  display: block;
   width: 2.75rem;
-  aspect-ratio: 1 / 1;
+  height: 2.75rem;
   border: 2px solid color-mix(in srgb, var(--color-gold) 55%, var(--color-white));
   border-radius: 50%;
-  background: linear-gradient(160deg, var(--color-green), #205937);
-  color: var(--color-gold);
-  font-family: var(--font-accent);
-  font-size: 0.88rem;
-  font-weight: 700;
-  letter-spacing: 0.07em;
+  object-fit: cover;
 }
 
 .brand-text {
@@ -1236,10 +1230,16 @@ body.hero-ready .hero-item {
     columns: 2 160px;
   }
 
+  .activities-grid,
   .archive-grid,
   .value-grid,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .info-card.reveal.is-visible {
+    display: block;
+    width: 100%;
   }
 
   .gallery-preview-grid img:nth-child(3n + 2) {
