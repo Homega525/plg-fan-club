@@ -1231,12 +1231,14 @@ body.hero-ready .hero-item {
   }
 
   .activities-grid,
+  .leaders-grid,
   .archive-grid,
   .value-grid,
   .footer-grid {
     grid-template-columns: 1fr;
   }
 
+  .leaders-grid .info-card.reveal,
   .info-card.reveal.is-visible {
     display: block;
     width: 100%;
