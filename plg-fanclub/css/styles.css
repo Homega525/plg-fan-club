@@ -460,7 +460,12 @@ main {
 }
 
 .activities-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: 1fr;
+}
+
+.activities-grid .info-card {
+  display: block;
+  width: 100%;
 }
 
 .info-card {
@@ -1243,7 +1248,6 @@ body.hero-ready .hero-item {
 }
 
 @media (max-width: 1040px) {
-  .activities-grid,
   .leaders-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1317,6 +1321,20 @@ body.hero-ready .hero-item {
 
   .form-grid {
     grid-template-columns: 1fr;
+  }
+
+  #executives-section.reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .leaders-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leaders-grid .info-card.reveal {
+    opacity: 1;
+    transform: none;
   }
 }
 
