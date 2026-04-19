@@ -1,260 +1,399 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Membership | PLG Fan Club</title>
-  <meta name="description" content="Join the PLG Fan Club family. Learn membership benefits and submit your application form online.">
-  <meta property="og:title" content="Join PLG Fan Club">
-  <meta property="og:description" content="Become part of a caring and vibrant community in Kentinkrono where your welfare is our priority.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/plg-fanclub/membership.html">
-  <meta property="og:image" content="https://picsum.photos/seed/plg-og-membership/1200/630">
-  <link rel="icon" href="images/site-logo.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membership | PLG Fan Club</title>
+    <meta
+      name="description"
+      content="Join the PLG Fan Club family. Learn membership benefits and submit your application form online."
+    />
+    <meta property="og:title" content="Join PLG Fan Club" />
+    <meta
+      property="og:description"
+      content="Become part of a caring and vibrant community in Kentinkrono where your welfare is our priority."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://plgfanclub.com/membership.html" />
+    <meta
+      property="og:image"
+      content="https://plgfanclub.com/images/site-logo.png"
+    />
+    <meta property="og:site_name" content="PLG Fan Club" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://plgfanclub.com/images/site-logo.png"
+    />
+    <link rel="icon" href="images/site-logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700;800&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header class="site-header" id="siteHeader">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html" aria-label="PLG Fan Club home">
-        <img class="logo-badge" src="images/site-logo.png" alt="PLG Fan Club logo">
-        <span class="brand-text">
-          <strong>PLG Fan Club</strong>
-          <small>Surpassing others!</small>
-        </span>
-      </a>
-      <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="events.html">Events</a>
-        <a href="blog.html">Blog</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="membership.html" class="is-active" aria-current="page">Membership</a>
-        <a href="constitution.html">Constitution</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main-content">
-    <section class="page-hero reveal">
-      <div class="container">
-        <p class="eyebrow">Become a Member</p>
-        <h1>Join the PLG Fan Club Family</h1>
-        <p>
-          Join a trusted community where we celebrate together, support one another, and ensure every
-          member feels valued and protected.
-        </p>
-      </div>
-    </section>
-
-    <section class="section reveal">
-      <div class="container membership-top">
-        <div class="content-block">
-          <h2>Why Join Us?</h2>
-          <ul class="benefits-list">
-            <li>Reliable welfare support during difficult times for you and your loved ones.</li>
-            <li>Priority access and participation in annual gatherings and special events.</li>
-            <li>A strong network for friendship, mentorship, and community growth.</li>
-            <li>Shared cultural celebrations that keep our identity and traditions alive.</li>
-            <li>Opportunities to volunteer, lead, and make a positive social impact.</li>
-            <li>A trusted family that stands with you in both celebration and challenge.</li>
-          </ul>
-        </div>
-        <aside class="fee-card">
-          <p class="label">Membership Fee</p>
-          <h3>Contact us for current membership fee details</h3>
-          <p>Fee plans may vary based on registration period and membership category.</p>
-          <a class="btn btn-primary" href="contact.html">Request Fee Details</a>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section section-angled reveal">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Application Form</p>
-          <h2>Membership Registration</h2>
-          <p>Please complete all required fields marked with *</p>
-        </div>
-
-        <div id="membershipSuccess" class="form-success" role="status" aria-live="polite" hidden>
-          Thank you for applying to join the PLG Fan Club family. Your application has been submitted successfully.
-        </div>
-
-        <form
-          id="membershipForm"
-          class="membership-form reveal"
-          action="https://formsubmit.co/ajax/nimohrichard430@gmail.com"
-          method="POST"
-          enctype="multipart/form-data"
-          novalidate>
-          <input type="hidden" name="_subject" value="New PLG Fan Club Membership Application">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <div class="form-grid">
-            <div class="form-group">
-              <label for="fullName">Full Name *</label>
-              <input id="fullName" name="fullName" type="text" autocomplete="name" required>
-              <p class="field-error" data-for="fullName"></p>
-            </div>
-
-            <div class="form-group">
-              <label for="dob">Date of Birth *</label>
-              <input id="dob" name="dob" type="date" required>
-              <p class="field-error" data-for="dob"></p>
-            </div>
-
-            <div class="form-group">
-              <label for="gender">Gender *</label>
-              <select id="gender" name="gender" required>
-                <option value="">Select gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Prefer not to say">Prefer not to say</option>
-              </select>
-              <p class="field-error" data-for="gender"></p>
-            </div>
-
-            <div class="form-group">
-              <label for="phone">Phone Number *</label>
-              <input id="phone" name="phone" type="tel" inputmode="tel" required>
-              <p class="field-error" data-for="phone"></p>
-            </div>
-
-            <div class="form-group">
-              <label for="whatsapp">WhatsApp Number (optional)</label>
-              <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel">
-              <p class="field-error" data-for="whatsapp"></p>
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email Address (optional)</label>
-              <input id="email" name="email" type="email" autocomplete="email">
-              <p class="field-error" data-for="email"></p>
-            </div>
-
-            <div class="form-group form-group-full">
-              <label for="address">Residential Address *</label>
-              <textarea id="address" name="address" rows="3" required></textarea>
-              <p class="field-error" data-for="address"></p>
-            </div>
-
-            <div class="form-group">
-              <label for="occupation">Occupation *</label>
-              <input id="occupation" name="occupation" type="text" required>
-              <p class="field-error" data-for="occupation"></p>
-            </div>
-
-            <div class="form-group">
-              <label for="emergencyName">Emergency Contact Name *</label>
-              <input id="emergencyName" name="emergencyName" type="text" required>
-              <p class="field-error" data-for="emergencyName"></p>
-            </div>
-
-            <div class="form-group">
-              <label for="emergencyPhone">Emergency Contact Phone *</label>
-              <input id="emergencyPhone" name="emergencyPhone" type="tel" inputmode="tel" required>
-              <p class="field-error" data-for="emergencyPhone"></p>
-            </div>
-
-            <div class="form-group">
-              <label for="hearAbout">How did you hear about us? *</label>
-              <select id="hearAbout" name="hearAbout" required>
-                <option value="">Select an option</option>
-                <option value="Friend">Friend</option>
-                <option value="Family">Family</option>
-                <option value="Community Event">Community Event</option>
-                <option value="Social Media">Social Media</option>
-                <option value="Other">Other</option>
-              </select>
-              <p class="field-error" data-for="hearAbout"></p>
-            </div>
-
-            <div class="form-group form-group-full">
-              <label for="photo">Upload Photo *</label>
-              <input id="photo" name="photo" type="file" accept="image/*" required>
-              <p class="field-error" data-for="photo"></p>
-            </div>
-
-            <div class="form-group form-group-full checkbox-group">
-              <label for="declaration">
-                <input id="declaration" name="declaration" type="checkbox" required>
-                I agree to abide by the rules and regulations of the PLG Fan Club. *
-              </label>
-              <p class="field-error" data-for="declaration"></p>
-            </div>
-          </div>
-          <button class="btn btn-primary" type="submit">Submit Application</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand footer-brand" href="index.html" aria-label="PLG Fan Club home">
-          <img class="logo-badge" src="images/site-logo.png" alt="PLG Fan Club logo">
+    <header class="site-header" id="siteHeader">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="PLG Fan Club home">
+          <img
+            class="logo-badge"
+            src="images/site-logo.png"
+            alt="PLG Fan Club logo"
+          />
           <span class="brand-text">
             <strong>PLG Fan Club</strong>
             <small>Surpassing others!</small>
           </span>
         </a>
-      </div>
-      <div>
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="membership.html">Membership</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Location</h3>
-        <p>Kentinkrono, Ghana</p>
-        <p>GPS: AK-631-1544</p>
-      </div>
-      <div>
-        <h3>Social</h3>
-        <button class="social-placeholder" type="button" title="Coming Soon" aria-label="TikTok coming soon">
-          <span aria-hidden="true">♫</span> TikTok
+        <button
+          class="nav-toggle"
+          data-nav-toggle
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="events.html">Events</a>
+          <a href="blog.html">Blog</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="membership.html" class="is-active" aria-current="page"
+            >Membership</a
+          >
+          <a href="constitution.html">Constitution</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>© 2025 PLG Fan Club. All rights reserved.</p>
-      <a href="/admin" style="opacity: 0.2; font-size: 11px; color: inherit; text-decoration: none;">Admin</a>
-    </div>
-  </footer>
+    </header>
 
-  <script src="js/main.js" defer></script>
-  <script src="js/membership.js" defer></script>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
-</body>
+    <main id="main-content">
+      <section class="page-hero reveal">
+        <div class="container">
+          <p class="eyebrow">Become a Member</p>
+          <h1>Join the PLG Fan Club Family</h1>
+          <p>
+            Join a trusted community where we celebrate together, support one
+            another, and ensure every member feels valued and protected.
+          </p>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="container membership-top">
+          <div class="content-block">
+            <h2>Why Join Us?</h2>
+            <ul class="benefits-list">
+              <li>
+                Reliable welfare support during difficult times for you and your
+                loved ones.
+              </li>
+              <li>
+                Priority access and participation in annual gatherings and
+                special events.
+              </li>
+              <li>
+                A strong network for friendship, mentorship, and community
+                growth.
+              </li>
+              <li>
+                Shared cultural celebrations that keep our identity and
+                traditions alive.
+              </li>
+              <li>
+                Opportunities to volunteer, lead, and make a positive social
+                impact.
+              </li>
+              <li>
+                A trusted family that stands with you in both celebration and
+                challenge.
+              </li>
+            </ul>
+          </div>
+          <aside class="fee-card">
+            <p class="label">Membership Fee</p>
+            <h3>Contact us for current membership fee details</h3>
+            <p>
+              Fee plans may vary based on registration period and membership
+              category.
+            </p>
+            <a class="btn btn-primary" href="contact.html"
+              >Request Fee Details</a
+            >
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section-angled reveal">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Application Form</p>
+            <h2>Membership Registration</h2>
+            <p>Please complete all required fields marked with *</p>
+          </div>
+
+          <div
+            id="membershipSuccess"
+            class="form-success"
+            role="status"
+            aria-live="polite"
+            hidden
+          >
+            Thank you for applying to join the PLG Fan Club family. Your
+            application has been submitted successfully.
+          </div>
+
+          <form
+            id="membershipForm"
+            class="membership-form reveal"
+            action="https://formsubmit.co/ajax/nimohrichard430@gmail.com"
+            method="POST"
+            enctype="multipart/form-data"
+            novalidate
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="New PLG Fan Club Membership Application"
+            />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  autocomplete="name"
+                  required
+                />
+                <p class="field-error" data-for="fullName"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="dob">Date of Birth *</label>
+                <input id="dob" name="dob" type="date" required />
+                <p class="field-error" data-for="dob"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="gender">Gender *</label>
+                <select id="gender" name="gender" required>
+                  <option value="">Select gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Prefer not to say">Prefer not to say</option>
+                </select>
+                <p class="field-error" data-for="gender"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  inputmode="tel"
+                  required
+                />
+                <p class="field-error" data-for="phone"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="whatsapp">WhatsApp Number (optional)</label>
+                <input
+                  id="whatsapp"
+                  name="whatsapp"
+                  type="tel"
+                  inputmode="tel"
+                />
+                <p class="field-error" data-for="whatsapp"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address (optional)</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                />
+                <p class="field-error" data-for="email"></p>
+              </div>
+
+              <div class="form-group form-group-full">
+                <label for="address">Residential Address *</label>
+                <textarea
+                  id="address"
+                  name="address"
+                  rows="3"
+                  required
+                ></textarea>
+                <p class="field-error" data-for="address"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="occupation">Occupation *</label>
+                <input id="occupation" name="occupation" type="text" required />
+                <p class="field-error" data-for="occupation"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="emergencyName">Emergency Contact Name *</label>
+                <input
+                  id="emergencyName"
+                  name="emergencyName"
+                  type="text"
+                  required
+                />
+                <p class="field-error" data-for="emergencyName"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="emergencyPhone">Emergency Contact Phone *</label>
+                <input
+                  id="emergencyPhone"
+                  name="emergencyPhone"
+                  type="tel"
+                  inputmode="tel"
+                  required
+                />
+                <p class="field-error" data-for="emergencyPhone"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="hearAbout">How did you hear about us? *</label>
+                <select id="hearAbout" name="hearAbout" required>
+                  <option value="">Select an option</option>
+                  <option value="Friend">Friend</option>
+                  <option value="Family">Family</option>
+                  <option value="Community Event">Community Event</option>
+                  <option value="Social Media">Social Media</option>
+                  <option value="Other">Other</option>
+                </select>
+                <p class="field-error" data-for="hearAbout"></p>
+              </div>
+
+              <div class="form-group form-group-full">
+                <label for="photo">Upload Photo *</label>
+                <input
+                  id="photo"
+                  name="photo"
+                  type="file"
+                  accept="image/*"
+                  required
+                />
+                <p class="field-error" data-for="photo"></p>
+              </div>
+
+              <div class="form-group form-group-full checkbox-group">
+                <label for="declaration">
+                  <input
+                    id="declaration"
+                    name="declaration"
+                    type="checkbox"
+                    required
+                  />
+                  I agree to abide by the rules and regulations of the PLG Fan
+                  Club. *
+                </label>
+                <p class="field-error" data-for="declaration"></p>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">
+              Submit Application
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a
+            class="brand footer-brand"
+            href="index.html"
+            aria-label="PLG Fan Club home"
+          >
+            <img
+              class="logo-badge"
+              src="images/site-logo.png"
+              alt="PLG Fan Club logo"
+            />
+            <span class="brand-text">
+              <strong>PLG Fan Club</strong>
+              <small>Surpassing others!</small>
+            </span>
+          </a>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Location</h3>
+          <p>Kentinkrono, Ghana</p>
+          <p>GPS: AK-631-1544</p>
+        </div>
+        <div>
+          <h3>Social</h3>
+          <a
+            class="social-link"
+            href="https://www.tiktok.com/@plg_fan_club?is_from_webapp=1&sender_device=pc"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow PLG Fan Club on TikTok"
+            ><span aria-hidden="true">♫</span> TikTok</a
+          >
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 PLG Fan Club. All rights reserved.</p>
+        <a
+          href="/admin"
+          style="
+            opacity: 0.2;
+            font-size: 11px;
+            color: inherit;
+            text-decoration: none;
+          "
+          >Admin</a
+        >
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/membership.js" defer></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
 </html>
